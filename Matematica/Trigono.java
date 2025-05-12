@@ -60,7 +60,7 @@ public abstract class Trigono {
     }
 
 
-    public abstract String apresentarDefinicao();
+    public abstract void apresentarDefinicao();
     public abstract void exibirFormula();
     
 }
