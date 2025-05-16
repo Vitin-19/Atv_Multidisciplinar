@@ -5,9 +5,10 @@ public abstract class Movimento {
     private double distancia;
     private double tempo;
 
-    public Movimento(double velocidade, double distancia){
+    public Movimento(double velocidade, double distancia, double tempo){
         this.velocidade = velocidade;
         this.distancia = distancia;
+        this.tempo = tempo;
     }
 
     //Métodos set
@@ -31,4 +32,5 @@ public abstract class Movimento {
     }
 
     public abstract void explicarMovimentoEspecifico();
+    public abstract void mostrarFormulas();
 }
