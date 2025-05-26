@@ -5,6 +5,9 @@ public class Pteridofita extends Planta{
         super(especie, nome_cientifico, classe, familia);
         set_tipo("Pteridófita");
     }
+    public Pteridofita(){
+        super(null,null,null,null);
+    }
 
     @Override
     public void explicar_tipo(){

@@ -5,6 +5,9 @@ public class Briofita extends Planta{
         super(especie, nome_cientifico, classe, familia);
         set_tipo("Briofita");
     }
+    public Briofita(){
+        super(null,null,null,null);
+    }
 
     @Override
     public void explicar_tipo(){

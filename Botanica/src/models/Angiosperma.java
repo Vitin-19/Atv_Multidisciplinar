@@ -5,6 +5,9 @@ public class Angiosperma extends Planta{
         super(especie, nome_cientifico, classe, familia);
         set_tipo("Angiosperma");
     }
+    public Angiosperma(){
+        super(null,null,null,null);
+    }
 
     @Override
     public void explicar_tipo(){

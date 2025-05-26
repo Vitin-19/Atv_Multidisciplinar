@@ -5,6 +5,9 @@ public class Gimnosperma extends Planta {
         super(especie, nome_cientifico, classe, familia);
         set_tipo("Gimnosperma");
     }
+    public Gimnosperma(){
+        super(null,null,null,null);
+    }
 
     @Override
     public void explicar_tipo(){
