@@ -1,4 +1,4 @@
-package models;
+package src.models;
 
 public class Pteridofita extends Planta{
     public Pteridofita(String especie, String nome_cientifico, String classe, String familia){
@@ -11,6 +11,8 @@ public class Pteridofita extends Planta{
 
     @Override
     public void explicar_tipo(){
-        System.out.println("Pteridófitas são plantas vasculares, ou seja, que apresentam vasos condutores de seiva.\n Essas plantas não possuem flores, sementes ou frutos e sua reprodução é dependente de água, uma vez que\n apresentam anterozoides flagelados que precisam nadar até a oosfera para que a fecundação ocorra.Um exemplo de\n pteridófita é a samambaia.");
+        System.out.println("\nPteridófitas\n");
+        
+        System.out.println("Pteridófitas são plantas vasculares, ou seja, que apresentam vasos condutores de seiva.\nEssas plantas não possuem flores, sementes ou frutos e sua reprodução é dependente de água, uma vez que\napresentam anterozoides flagelados que precisam nadar até a oosfera para que a fecundação ocorra. Um exemplo de\npteridófita é a samambaia.");
     }
 }

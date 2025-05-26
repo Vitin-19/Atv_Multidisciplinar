@@ -1,4 +1,4 @@
-package models;
+package src.models;
 
 public abstract class Planta {
     private String especie;

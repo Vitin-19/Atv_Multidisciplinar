@@ -1,4 +1,4 @@
-package models;
+package src.models;
 
 public class Briofita extends Planta{
     public Briofita(String especie, String nome_cientifico, String classe, String familia){
@@ -11,6 +11,8 @@ public class Briofita extends Planta{
 
     @Override
     public void explicar_tipo(){
-        System.out.println("As briófitas são um grupo de plantas avasculares, ou seja, não possuem tecidos condutores\n de água e nutrientes, caracterizando-se por seu pequeno porte e vida em ambientes úmidos e sombreados.\nGeralmente as briófitas são plantas rasteiras como o musgo.");
+        System.out.println("\nBriófitas\n");
+        
+        System.out.println("As briófitas são um grupo de plantas avasculares, ou seja, não possuem tecidos condutores\nde água e nutrientes, caracterizando-se por seu pequeno porte e vida em ambientes úmidos e sombreados\nGeralmente as briófitas são plantas rasteiras como o musgo.");
     }
 }

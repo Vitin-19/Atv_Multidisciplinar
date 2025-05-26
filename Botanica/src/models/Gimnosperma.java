@@ -1,4 +1,4 @@
-package models;
+package src.models;
 
 public class Gimnosperma extends Planta {
     public Gimnosperma(String especie, String nome_cientifico, String classe, String familia){
@@ -11,6 +11,8 @@ public class Gimnosperma extends Planta {
 
     @Override
     public void explicar_tipo(){
-        System.out.println("As gimnospermas caracterizam-se por sua independência de água para a reprodução e por\n produzirem sementes nuas. As gimnospermas são plantas vasculares, normalmente árvores, conhecidas principalmente\n por uma importante novidade evolutiva: as sementes.\n O Pinheiro é um exemplo de gimnosperma.");
+        System.out.println("\nGimnospermas\n");
+
+        System.out.println("As gimnospermas caracterizam-se por sua independência de água para a reprodução e por\nproduzirem sementes nuas. As gimnospermas são plantas vasculares, normalmente árvores, conhecidas\nprincipalmente\npor uma importante novidade evolutiva: as sementes.\nO Pinheiro é um exemplo de gimnosperma.");
     }
 }
