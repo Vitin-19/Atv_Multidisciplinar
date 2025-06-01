@@ -1,8 +1,11 @@
-import java.util.List;
-import java.util.ArrayList;
+package Matematica;
+
+// CÓDIGO FEITO POR PEDRO ISAÍAS GOMES DE JESUS - 2°DS MTEC
+// GRUPO: VITOR PAIVA NUNES DE PAULA - PYETRO FABRÍCIO PETERLINI
+
 import java.util.Scanner;
 
-public class Main {
+public class MainTrigono {
 
     public static void apresentarTeoria() {
         Trigono[] Definicoes = {
@@ -40,7 +43,7 @@ public class Main {
         }
     }
 
-    public static void main(String[] args) {
+    public static void mainTrigono() {
         Scanner scanner = new Scanner(System.in);
         int op;
 

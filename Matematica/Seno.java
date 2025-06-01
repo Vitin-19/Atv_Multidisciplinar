@@ -1,3 +1,5 @@
+package Matematica;
+
 import java.util.Scanner;
 public class Seno extends Trigono {
     public Seno(String Definicao, double Hipotenusa, double CatAdjacente, double CatOposto, double TangenteF, double SenoF,

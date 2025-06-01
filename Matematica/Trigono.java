@@ -1,4 +1,4 @@
-import java.util.ArrayList;
+package Matematica;
 
 public abstract class Trigono {
 

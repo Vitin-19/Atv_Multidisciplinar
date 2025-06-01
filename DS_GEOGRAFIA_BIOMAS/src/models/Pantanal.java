@@ -1,5 +1,4 @@
-package src.models;
-
+package DS_GEOGRAFIA_BIOMAS.src.models;
 public class Pantanal extends Bioma {
     public Pantanal() {
         setNome("Pantanal");

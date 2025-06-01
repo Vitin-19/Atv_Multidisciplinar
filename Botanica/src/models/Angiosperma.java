@@ -1,4 +1,4 @@
-package src.models;
+package Botanica.src.models;
 
 public class Angiosperma extends Planta{
     public Angiosperma(String especie, String nome_cientifico, String classe, String familia){

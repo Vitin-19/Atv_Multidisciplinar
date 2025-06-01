@@ -1,18 +1,18 @@
 // CÓDIGO FEITO POR PYETRO FABRÍCIO PETERLINI - 2°DS MTEC
 // GRUPO: PEDRO ISAÍAS GOMES DE JESUS - VITOR PAIVA NUNES DE PAULA
-package src;
+package DS_GEOGRAFIA_BIOMAS.src;
 
+import DS_GEOGRAFIA_BIOMAS.src.models.Amazonia;
+import DS_GEOGRAFIA_BIOMAS.src.models.Bioma;
+import DS_GEOGRAFIA_BIOMAS.src.models.Caatinga;
+import DS_GEOGRAFIA_BIOMAS.src.models.Cerrado;
+import DS_GEOGRAFIA_BIOMAS.src.models.MataAtlantica;
+import DS_GEOGRAFIA_BIOMAS.src.models.Pampas;
+import DS_GEOGRAFIA_BIOMAS.src.models.Pantanal;
 import java.util.Scanner;
-import src.models.Amazonia;
-import src.models.Bioma;
-import src.models.Caatinga;
-import src.models.Cerrado;
-import src.models.MataAtlantica;
-import src.models.Pampas;
-import src.models.Pantanal;
 
-public class Main {
-    public static void main(String[] args) {
+public class MainBiomas {
+    public static void mainBiomas() {
         Scanner scanner = new Scanner(System.in);
 
         int op;
@@ -105,7 +105,5 @@ public class Main {
             };
 
         } while (op != 3);
-
-        scanner.close();
     };
 };

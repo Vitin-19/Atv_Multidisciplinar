@@ -1,4 +1,4 @@
-package src.models;
+package Botanica.src.models;
 
 public class Gimnosperma extends Planta {
     public Gimnosperma(String especie, String nome_cientifico, String classe, String familia){

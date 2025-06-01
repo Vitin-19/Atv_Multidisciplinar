@@ -1,3 +1,5 @@
+package Matematica;
+
 import java.util.Scanner;
 public class Tangente extends Trigono{
 

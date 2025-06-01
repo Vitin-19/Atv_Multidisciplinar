@@ -1,12 +1,12 @@
-package src;
+package Botanica.src;
 
+import Botanica.src.models.Angiosperma;
+import Botanica.src.models.Briofita;
+import Botanica.src.models.Gimnosperma;
+import Botanica.src.models.Planta;
+import Botanica.src.models.Pteridofita;
 import java.util.ArrayList;
 import java.util.Scanner;
-import src.models.Angiosperma;
-import src.models.Briofita;
-import src.models.Gimnosperma;
-import src.models.Planta;
-import src.models.Pteridofita;
 
 public class Menu {
 
@@ -77,7 +77,7 @@ public class Menu {
             System.out.println("Cadastramento cancelado");
             return plantas;
         }
-        Planta newPlanta;
+        Planta newPlanta; // planta que será cadastrada
         switch (tipo) {
             case "briofita":
                 newPlanta = new Briofita(especie, nomeCientifico, classe, familia);
@@ -253,8 +253,7 @@ public class Menu {
         return plantas;
     }
 
-    public void menu() {
-        ArrayList<Planta> plantas = new ArrayList<Planta>();
+    public ArrayList<Planta> menu(ArrayList<Planta> plantas) {
         do {
             System.out.println("***MENU***");
             System.out.println("1- Explicar tipos de plantas");
@@ -289,7 +288,7 @@ public class Menu {
                     break;
             }
             if (opMenu == 6) {
-                break;
+                return plantas;
             }
         } while (true);
     }

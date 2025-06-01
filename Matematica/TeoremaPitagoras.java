@@ -1,3 +1,5 @@
+package Matematica;
+
 import java.util.ArrayList;
 import java.util.Scanner;
 

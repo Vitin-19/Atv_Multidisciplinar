@@ -1,4 +1,4 @@
-package src.models;
+package Botanica.src.models;
 
 public class Pteridofita extends Planta{
     public Pteridofita(String especie, String nome_cientifico, String classe, String familia){

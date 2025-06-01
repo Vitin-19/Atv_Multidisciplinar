@@ -1,4 +1,4 @@
-package src.models;
+package Botanica.src.models;
 
 public abstract class Planta {
     private String especie;
@@ -48,10 +48,10 @@ public abstract class Planta {
         this.tipo = tipo;
     }
 
-    // métodos abstratos
+    // método abstratos
     public abstract void explicar_tipo();
 
-    // métodos superiores
+    // método usado em todas as subclasses
     public void mostrar_planta(){
         System.out.println("Espécie: " + get_especie());
         System.out.println("Tipo: " + get_tipo());

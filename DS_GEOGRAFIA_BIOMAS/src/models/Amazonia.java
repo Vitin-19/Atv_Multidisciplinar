@@ -1,4 +1,4 @@
-package src.models;
+package DS_GEOGRAFIA_BIOMAS.src.models;
 
 public class Amazonia extends Bioma {
     public Amazonia() {
