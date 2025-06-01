@@ -54,11 +54,11 @@ public class Menu {
     public ArrayList<Planta> cadastrarPlanta(ArrayList<Planta> plantas) {
         System.out.println("Digite a espécie da planta: ");
         String especie = scan.nextLine();
-        System.out.println("Digite o tipo da planta ex(briofita,pteridofita,...) OBS: NÃO USE CARACTERES ESPECIAIS: ");
+        System.out.println("Digite o tipo da planta ex(briofita,pteridofita,gimnosperma,angiosperma) OBS: NÃO USE CARACTERES ESPECIAIS: ");
         String tipo = scan.nextLine().toLowerCase();
         if (!verificaTipo(tipo)) {
             while (true) {
-                System.out.println("Digite um tipo válida ex(briofita,pteridofita,...) OBS: NÃO USE CARACTERES ESPECIAIS: ");
+                System.out.println("Digite um tipo válida ex(briofita,pteridofita,gimnosperma,angiosperma) OBS: NÃO USE CARACTERES ESPECIAIS: ");
                 tipo = scan.nextLine().toLowerCase();
                 if (verificaTipo(tipo)) {
                     break;
