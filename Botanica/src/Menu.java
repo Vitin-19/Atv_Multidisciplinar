@@ -58,7 +58,7 @@ public class Menu {
         String tipo = scan.nextLine().toLowerCase();
         if (!verificaTipo(tipo)) {
             while (true) {
-                System.out.println("Digite um tipo válida ex(briofita,pteridofita,gimnosperma,angiosperma) OBS: NÃO USE CARACTERES ESPECIAIS: ");
+                System.out.println("Digite um tipo válido ex(briofita,pteridofita,gimnosperma,angiosperma) OBS: NÃO USE CARACTERES ESPECIAIS: ");
                 tipo = scan.nextLine().toLowerCase();
                 if (verificaTipo(tipo)) {
                     break;
@@ -180,7 +180,7 @@ public class Menu {
                 String novoTipo = scan.nextLine().toLowerCase();
                 if (!verificaTipo(novoTipo)) {
                     while (true) {
-                        System.out.println("Digite um tipo válida ex(briofita,pteridofita,...) OBS: NÃO USE CARACTERES ESPECIAIS: ");
+                        System.out.println("Digite um tipo válido ex(briofita,pteridofita,gimnosperma,angiosperma) OBS: NÃO USE CARACTERES ESPECIAIS: ");
                         novoTipo = scan.nextLine().toLowerCase();
                         if (verificaTipo(novoTipo)) {
                             break;
