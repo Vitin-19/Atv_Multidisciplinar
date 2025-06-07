@@ -1,9 +1,11 @@
 package DS_GEOGRAFIA_BIOMAS.src.models;
 
+// Classe abstrata Bioma, usada como base para as subclasses
 public abstract class Bioma {
-    String nome;
-    String clima;
+    String nome; // variavel do nome
+    String clima; // variavel do clima
 
+    // metodo getter para acessar nome e clima
     public String getNome() {
         return nome;
     };
@@ -12,6 +14,7 @@ public abstract class Bioma {
         return clima;
     };
 
+    // metodo setter para definir nome e clima
     public void setNome(String nome) {
         this.nome = nome;
     };
@@ -20,6 +23,7 @@ public abstract class Bioma {
         this.clima = clima;
     };
 
+    // metodos abstratos que serão implementados nas subclasses
     public abstract void apresentarNome();
     public abstract void exibirClima();
     public abstract void exibirDetalhes();
