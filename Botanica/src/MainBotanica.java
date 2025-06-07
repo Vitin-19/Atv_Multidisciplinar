@@ -5,7 +5,7 @@ package Botanica.src;
 import Botanica.src.models.Planta;
 import java.util.ArrayList;
 
-
+// Classe principal de botânica
 public class MainBotanica {
     public static ArrayList<Planta> mainBotanica(ArrayList<Planta> plantas) {
         Menu menu = new Menu();

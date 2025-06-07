@@ -6,16 +6,17 @@ import Matematica.MainTrigono;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-
+// Classe principal de todo o projeto
 public class Main {
-
-   
     public static void main(String[] args) {
+
         Scanner scan = new Scanner(System.in);
         MainBotanica botanica = new MainBotanica();
         MainBiomas biomas = new MainBiomas();
         MainTrigono trigonometria = new MainTrigono();
-        ArrayList<Planta> plantas = new ArrayList<Planta>();
+
+        ArrayList<Planta> plantas = new ArrayList<Planta>(); // Array List para manter as plantas sempre cadastradas
+
         do { 
             System.out.println("__MENU__");
             System.out.println("1- Biologia/Botânica");
@@ -23,6 +24,7 @@ public class Main {
             System.out.println("3- Matemática/Trigonometria");
             System.out.println("4- Sair");
             int opcao = scan.nextInt();
+            
             switch(opcao){
                 case 1:
                     plantas = botanica.mainBotanica(plantas);

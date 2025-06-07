@@ -12,6 +12,8 @@ public class Menu {
 
     Scanner scan = new Scanner(System.in);
 
+
+    // Função para verificar se o tipo digitado pelo usuário está correto
     public boolean verificaTipo(String especie) {
         switch (especie) {
             case "briofita":
@@ -24,6 +26,8 @@ public class Menu {
         }
     }
 
+
+    // Função para o usuário verificar se os dados do cadastro estão corretos
     public boolean confirmarCadastro(String especie, String tipo, String nomeCientifico, String classe, String familia) {
         System.out.println("Os dados estão corretos ?");
         System.out.println("Espécie: " + especie);
@@ -43,6 +47,8 @@ public class Menu {
         }
     }
 
+    // Função para explicar os tipos de plantas existentes:
+    // briófitas, pteridófitas, gimnospermas, angiospermas
     public void explicarPlantas() {
         Planta[] tipos = {new Briofita(), new Pteridofita(), new Gimnosperma(), new Angiosperma()};
         for (Planta tipo : tipos) {
@@ -51,32 +57,45 @@ public class Menu {
         }
     }
 
+
+    // Função para cadastrar uma planta
     public ArrayList<Planta> cadastrarPlanta(ArrayList<Planta> plantas) {
         System.out.println("Digite a espécie da planta: ");
         String especie = scan.nextLine();
         System.out.println("Digite o tipo da planta ex(briofita,pteridofita,gimnosperma,angiosperma) OBS: NÃO USE CARACTERES ESPECIAIS: ");
         String tipo = scan.nextLine().toLowerCase();
+
+        // Verifica se o tipo de planta digitado está correto
         if (!verificaTipo(tipo)) {
             while (true) {
                 System.out.println("Digite um tipo válido ex(briofita,pteridofita,gimnosperma,angiosperma) OBS: NÃO USE CARACTERES ESPECIAIS: ");
                 tipo = scan.nextLine().toLowerCase();
+
                 if (verificaTipo(tipo)) {
                     break;
                 }
             }
         }
+        
         System.out.println("Digite o nome científico da planta: ");
         String nomeCientifico = scan.nextLine();
+
         System.out.println("Digite a classe da planta: ");
         String classe = scan.nextLine();
+
         System.out.println("Digite a família da planta: ");
         String familia = scan.nextLine();
+
         System.out.println("");
-        boolean confirmacao = confirmarCadastro(especie, tipo, nomeCientifico, classe, familia);
+
+        boolean confirmacao = confirmarCadastro(especie, tipo, nomeCientifico, classe, familia); 
+
+        // Confirmar os dados antes de cadstrar
         if (!confirmacao) {
             System.out.println("Cadastramento cancelado");
             return plantas;
         }
+
         Planta newPlanta; // planta que será cadastrada
         switch (tipo) {
             case "briofita":
@@ -100,21 +119,31 @@ public class Menu {
         return plantas;
     }
 
+
+    // Função para visualizar as plantas cadastradas
     public void visualizarPlanta(ArrayList<Planta> plantas) {
+
+        // Verificar se há plantas cadastradas
         if (plantas.isEmpty()) {
             System.out.println("Nenhuma planta cadastrada");
         } else {
             System.out.println("Qual planta deseja visualizar ?");
+
+            // mostrar as plantas cadastradas
             for (Planta planta : plantas) {
                 System.out.println(planta.get_especie());
             }
+
             String plantaSelecionada = scan.nextLine().toLowerCase();
             int index = -1;
+
+            // selecionar a planta escolhida
             for (int i = 0; i < plantas.size(); i++) {
                 if (plantaSelecionada.equals(plantas.get(i).get_especie().toLowerCase())) {
                     index = i;
                 }
             }
+
             if (index == -1) {
                 System.out.println("Planta não encontrada");
             } else {
@@ -124,29 +153,42 @@ public class Menu {
         }
     }
 
+
+    // Função para editar planta
     public ArrayList<Planta> editarPlanta(ArrayList<Planta> plantas) {
+
+        // Verifica se há plantas cadastradas
         if (plantas.isEmpty()) {
             System.out.println("Nenhuma planta cadastrada");
             return plantas;
         }
+
         System.out.println("Qual planta deseja editar ?\n");
+
+        // mostrar as plantas cadastradas
         for (Planta planta : plantas) {
             System.out.println(planta.get_especie());
         }
+
         String plantaSelecionada = scan.nextLine().toLowerCase();
         int index = -1;
+
+        // selecionar a planta selecionada
         for (int i = 0; i < plantas.size(); i++) {
             if (plantaSelecionada.equals(plantas.get(i).get_especie().toLowerCase())) {
                 index = i;
             }
         }
+
         if (index == -1) {
             System.out.println("Planta não encontrada");
             return plantas;
         }
-        System.out.println("\nO que deseja editar (ex: especie, classe,...) Digite cancelar para cancelar: ");
+
+        System.out.println("\nO que deseja editar (ex: especie, classe,...) Digite 'cancelar' para cancelar: ");
         plantas.get(index).mostrar_planta();
         String caracteristica = scan.nextLine().toLowerCase();
+
         switch (caracteristica) {
             case "especie":
                 System.out.println("Digite a nova espécie: ");
@@ -178,6 +220,8 @@ public class Menu {
             case "tipo":
                 System.out.println("Digite o novo tipo: (OBS: NÃO USE CARACTERES ESPECIAIS)");
                 String novoTipo = scan.nextLine().toLowerCase();
+
+                // Verifica se o novo tipo está correto
                 if (!verificaTipo(novoTipo)) {
                     while (true) {
                         System.out.println("Digite um tipo válido ex(briofita,pteridofita,gimnosperma,angiosperma) OBS: NÃO USE CARACTERES ESPECIAIS: ");
@@ -187,8 +231,11 @@ public class Menu {
                         }
                     }
                 }
+
+                // Seleciona os dados da planta atual para criar uma nova com os mesmos mais o tipo novo
                 Planta planta = plantas.get(index);
                 System.out.println("");
+
                 switch (novoTipo) {
                     case "briofita":
                         planta = new Briofita(planta.get_especie(), planta.get_nome_cientifico(), planta.get_classe(), planta.get_familia());
@@ -207,6 +254,8 @@ public class Menu {
                         plantas.add(planta);
                         break;
                 }
+
+                // Remove a planta antiga
                 plantas.remove(index);
                 System.out.println("Planta editada com sucesso");
                 break;
@@ -217,28 +266,43 @@ public class Menu {
         return plantas;
     }
 
+    
+    // Função para excluir uma planta
     public ArrayList<Planta> excluirPlanta(ArrayList<Planta> plantas) {
+
+        // Verifica se há plantas cadastradas
         if (plantas.isEmpty()) {
             System.out.println("Nenhuma planta cadastrada");
             return plantas;
         }
+
+
         System.out.println("\nQual planta deseja excluir ?\n");
+
+        // Mostrar as plantas cadastardas 
         for (Planta planta : plantas) {
             System.out.println(planta.get_especie());
         }
+
         String plantaSelecionada = scan.nextLine().toLowerCase();
         int index = -1;
+
+        // Selecionar a planta escolhida
         for (int i = 0; i < plantas.size(); i++) {
             if (plantaSelecionada.equals(plantas.get(i).get_especie().toLowerCase())) {
                 index = i;
             }
         }
+
         if (index == -1) {
             System.out.println("Planta não encontrada");
             return plantas;
         }
+
+        // Confirma se o usuário quer realmente excluir a planta
         System.out.printf("Tem certeza que deseja excluir %s S/N ?\n", plantas.get(index).get_especie());
         String confirmacao = scan.nextLine().toLowerCase();
+
         switch (confirmacao) {
             case "s":
                 plantas.remove(index);
@@ -250,9 +314,11 @@ public class Menu {
                 System.out.println("Opção inválida");
                 excluirPlanta(plantas);
         }
+
         return plantas;
     }
 
+    // Função que possui o menu que vai executar todas as funções
     public ArrayList<Planta> menu(ArrayList<Planta> plantas) {
         do {
             System.out.println("***MENU***");
@@ -262,7 +328,7 @@ public class Menu {
             System.out.println("4- Editar planta");
             System.out.println("5- Excluir planta");
             System.out.println("6- Sair");
-            int opMenu = scan.nextInt();
+            int opMenu = scan.nextInt(); // opção escolhida pelo usuário
             scan.nextLine();
             switch (opMenu) {
                 case 1:
