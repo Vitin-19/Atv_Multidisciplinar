@@ -1,23 +1,26 @@
 package Matematica;
 
+// Declara a classe abstrata Trigono
 public abstract class Trigono {
 
-    protected String Definicao;
-    private double Hipotenusa, CatAdjacente, CatOposto;
-    private String Formula;
-    private double TangenteF;
-    private double SenoF;
-    private double CossenoF;
+    // Atributos da classe Trigono
+    protected String Definicao; // Armazena a definição teórica
+    private double Hipotenusa, CatAdjacente, CatOposto; //Medidas do lado do triangulo
+    private String Formula; // Armazena a representação da formula
+    private double TangenteF; // Valor final da Tangente
+    private double SenoF; // Valor final do Seno
+    private double CossenoF; // Valor final do Cosseno
 
-    public Trigono(String Definicao, double Hipotenusa, double CatAdjacente, double CatOposto, double TangenteF, double SenoF,
-            double CossenoF) {
+    // Construtor da classe Trigono
+
+    public Trigono(String Definicao, double Hipotenusa, double CatAdjacente, double CatOposto, double TangenteF, double SenoF, double CossenoF) {
         set_Definicao(Definicao);
         set_Formula(Formula);
         set_CatAdjacente(CatAdjacente);
         set_CatOposto(CatOposto);
         set_TangenteF(TangenteF);
-        set_SenoF(CossenoF);
-        set_CossenoF(SenoF);        
+        set_SenoF(SenoF);
+        set_CossenoF(CossenoF);        
     };
 
 
@@ -90,7 +93,7 @@ public abstract class Trigono {
     }
 
 
-    //MEtodos Abstratos
+    //Metodos Abstratos
     public abstract void apresentarDefinicao();
     public abstract void exibirFormula();
 
